@@ -4,6 +4,18 @@
 
 Proyecto desarrollado por Juan Manuel Aguiar y Andrés Duarte con el objetivo de gestionar una interfaz con usuarios autenticados que interactúan con un sistema gestor de inventario de herramientas. El sistema cuenta con tres microservicios realizados en Spring Boot, los cuales se comunican con una base de datos MySQL en un servidor MariaDB para el almacenamiento de datos. Además, se ha desarrollado una interfaz de usuarios que se comunica con estos microservicios y está desplegada en un servidor Node.js con el framework Angular.
 
+## Documentación
+
+### BackEnd
+#### Microservicio de Autenticación
+[Documentación del Microservicio de Autenticación](Documentation/BackEnd/Auth_Service/index.html)
+#### Microservicio de Herramientas
+[Documentación del Microservicio de Herramientas](Documentation/BackEnd/Tool_Service/index.html)
+#### Microservicio de Usuarios
+[Documentación del Microservicio de Usuarios](Documentation/BackEnd/User_Service/index.html)
+### FrontEnd
+[Documentación del FrontEnd](Documentation/FrontEnd/index.html)
+
 ## Navegación
 
 En esta página web, encontrarás una barra de navegación que te permitirá acceder a las siguientes opciones:
