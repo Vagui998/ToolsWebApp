@@ -1,0 +1,46 @@
+[
+  {
+    "id": 4,
+          "name": "TestPOST",
+          "image_url": "http://www.testImage.com/15",
+          "description": "Test POST",
+              "brand": {
+              "id": 3,
+              "name": "Makita",
+              "image_url": "http://img.com/Makita.jpg"
+                  },
+          "price": 29.91
+  },
+  
+  {
+    "id": 4,
+          "name": "TestPUT",
+          "image_url": "http://www.testImage.com/15",
+          "description": "Test Put",
+              "brand": {
+              "id": 3,
+              "name": "Makita",
+              "image_url": "http://img.com/Makita.jpg"
+                  },
+          "price": 29.91
+  },
+
+  {
+    "name": "PostTest",
+    "pass": "1234",
+    "accountType": {
+        "id": 3,
+        "name": "User"
+    }
+  },
+
+  {
+    "id": 4,
+    "name": "PUT Test",
+    "pass": "1234",
+    "accountType": {
+        "id": 2,
+        "name": "Admin"
+    }
+  }
+]

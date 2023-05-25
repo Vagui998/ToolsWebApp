@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "76fdacbb-9029-4cbc-87c5-f79c1e22ff8b",
+		"name": "Tests MicroServicio Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26302097"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Admin\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:11234/auth/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11234",
+					"path": [
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"FirstUser\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:11234/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11234",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4MTkzNjI0MCwiZXhwIjoxNjgxOTM2ODQwfQ.biEc19RNRDWjHh_D00TWKWWuLNPWeCNNEhCsRIesI9M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:11234/users/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11234",
+					"path": [
+						"users",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by username",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4MTkzNjI0MCwiZXhwIjoxNjgxOTM2ODQwfQ.biEc19RNRDWjHh_D00TWKWWuLNPWeCNNEhCsRIesI9M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:11234/users/FirstUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11234",
+					"path": [
+						"users",
+						"FirstUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4MTkzNjI0MCwiZXhwIjoxNjgxOTM2ODQwfQ.biEc19RNRDWjHh_D00TWKWWuLNPWeCNNEhCsRIesI9M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"UserTest2\",\r\n  \"password\": \"1234\",\r\n  \"role\": \"User\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:11234/api/v1/users/newEntry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11234",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"newEntry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4MTkzNzc1NSwiZXhwIjoxNjgxOTM4MzU1fQ.G-USTGNFGAtTcdzjK0RbCNHvFU1rzDismE4IbHl1NHY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"5\",\r\n  \"username\": \"PutTest\",\r\n  \"password\": \"12345\",\r\n  \"role\": \"Admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:11234/api/v1/users/updateEntry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11234",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"updateEntry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4MTkzNzc1NSwiZXhwIjoxNjgxOTM4MzU1fQ.G-USTGNFGAtTcdzjK0RbCNHvFU1rzDismE4IbHl1NHY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:11234/api/v1/users/deleteEntry/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11234",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"deleteEntry",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,7 @@
+com.javeriana.tool_manager
+com.javeriana.tool_manager.Controllers
+com.javeriana.tool_manager.Entities
+com.javeriana.tool_manager.Interfaces
+com.javeriana.tool_manager.RelationEntities
+com.javeriana.tool_manager.Repos
+com.javeriana.tool_manager.Services

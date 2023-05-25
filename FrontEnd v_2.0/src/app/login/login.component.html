@@ -1,0 +1,17 @@
+<div fxLayoutAlign="center center" fxFlexFill class="animated fadeIn">
+  <mat-card fxFlex="25" class="row animated fadeIn fast">
+    <mat-toolbar color="primary">Pagina de Login</mat-toolbar>
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" (submit)="login()">
+      <mat-form-field>
+        <input matInput placeholder="Usuario" name="username" [(ngModel)]="username">
+      </mat-form-field>
+      
+      <mat-form-field>
+        <input matInput type="password" placeholder="Contraseña" name="password" [(ngModel)]="password">
+      </mat-form-field>
+      
+      <button mat-raised-button type="submit" color="primary">Login</button>
+    </form>
+  </mat-card>
+</div>
+

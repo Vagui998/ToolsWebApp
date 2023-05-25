@@ -1,0 +1,37 @@
+<h1 class="p-2"><strong>Inventario de las herramientas</strong></h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">#</th>
+      <th scope="col" class="text-center">Nombre herramienta</th>
+      <th scope="col" class="text-center">Marca</th>
+      <th scope="col" class="text-center">Descripción</th>
+      <th scope="col" class="text-center">Editar</th>
+      <th scope="col" class="text-center">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tool of listOfTools | paginate: { id: 'foo', itemsPerPage: 3, currentPage: page, totalItems: totalItems}; let i = index" class="col">
+      <th scope="row" class="align-middle">{{tool.id}}</th>
+      <td class="align-middle text-center">{{tool.name}}</td>
+      <td class="align-middle text-center">{{tool.brand.name}}</td>
+      <td class="align-middle text-center">{{tool.description}}</td>
+      <td class="align-middle text-center">
+        <button type="button" name="button" class="btn btn-primary" [routerLink]="['/home/form', tool.id]" [queryParams]="{ id: tool.id }">Editar</button>
+      </td>
+      <td class="align-middle text-center">
+        <button class="btn btn-danger" (click)="delete(tool.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="pagination-navigation-container d-flex justify-content-center">
+  <button (click)="previousPage()" class="btn btn-primary">Anterior</button>
+  <span class="current-page">Pagina {{page+1}}</span>
+  <button (click)="nextPage()" class="btn btn-primary">Siguiente</button>
+</div>
+
+<div class="d-flex justify-content-start mb-3">
+  <button class="btn btn-primary" [routerLink]="['/home/form']">Crear nueva herramienta</button>
+</div>

@@ -1,0 +1,26 @@
+<h1>Herramientas</h1>
+<hr>
+
+<div class="tools-container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let tool of listOfTools | paginate: { id: 'foo', itemsPerPage: 3, currentPage: page, totalItems: totalItems}; let i = index" class="col">
+      <div class="card h-100 animated fadeIn fast">
+        <img [src]="tool.imageURL" class="card-img-top" [alt]="tool.name" style="width: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">{{tool.name}}</h5>
+          <p class="card-text">{{tool.description}}</p>
+        </div>
+        <div class="card-footer">
+          <p class="card-text"><small class="text-muted">{{tool.brand.name}}</small></p>
+          <button (click)="seeTool(+i)" type="button" class="btn btn-outline-primary">Ver mas...</button>
+          <!-- <a [routerLink]="['/tool','i']" class="btn btn-outline-primary">Ver más...</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagination-navigation-container d-flex justify-content-center">
+    <button (click)="previousPage()" class="btn btn-primary">Anterior</button>
+    <span class="current-page">Pagina {{page+1}}</span>
+    <button (click)="nextPage()" class="btn btn-primary">Siguiente</button>
+  </div>
+</div>

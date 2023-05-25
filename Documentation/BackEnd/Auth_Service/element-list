@@ -1,0 +1,6 @@
+com.javeriana.auth_manager
+com.javeriana.auth_manager.Authentication
+com.javeriana.auth_manager.Configuration
+com.javeriana.auth_manager.Entities
+com.javeriana.auth_manager.Repos
+com.javeriana.auth_manager.Services

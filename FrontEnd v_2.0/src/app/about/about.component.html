@@ -1,0 +1,32 @@
+<table class="table">
+  <thead>
+    <tr class="text-center">
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Cargo</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of listOfUsers | slice:from:until let i=index" class="text-center">
+      <th scope="row" class="align-middle">{{user.id}}</th>
+      <td class="align-middle">{{user.name}}</td>
+      <td class="align-middle">{{user.lastName}}</td>
+      <td class="align-middle">{{user.role}}</td>
+      <td class="align-middle"> <button type="button" name="button" class="btn btn-primary align-middle" [routerLink]="['/users/form', user.id]">Editar</button> </td>
+      <td class="align-middle"> <button class="btn btn-danger" (click)="delete">Eliminar</button> </td>
+    </tr>
+  </tbody>
+</table>
+
+<mat-paginator [length]="listOfUsers.length"
+              [pageSize]="pageSize"
+              (page)="changePage($event)"
+              aria-label="Select page">
+</mat-paginator>
+<div class="d-flex justify-content-start mb-3">
+  <button class="btn btn-primary" [routerLink]="['/users/form']">Crear nuevo usuario</button>
+</div>

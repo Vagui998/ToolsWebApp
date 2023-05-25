@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.javeriana.auth_manager"},{"l":"com.javeriana.auth_manager.Authentication"},{"l":"com.javeriana.auth_manager.Configuration"},{"l":"com.javeriana.auth_manager.Entities"},{"l":"com.javeriana.auth_manager.Repos"},{"l":"com.javeriana.auth_manager.Services"}];updateSearchResults();

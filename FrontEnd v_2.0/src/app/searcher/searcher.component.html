@@ -1,0 +1,27 @@
+<h1>Buscando <small>{{ term }}</small></h1>
+<hr>
+
+<div class="row" *ngIf="tools.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados con la busqueda realizada!
+    </div>
+  </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div *ngFor="let tool of tools; let i = index" class="col">
+    <div class="card h-100 animated fadeIn fast">
+      <img [src]="tool.imageURL" class="card-img-top" [alt]="tool.name">
+      <div class="card-body">
+        <h5 class="card-title">{{tool.name}}</h5>
+        <p class="card-text">{{tool.description}}</p>
+      </div>
+      <div class="card-footer">
+        <p class="card-text"><small class="text-muted">{{tool.brand.name}}</small></p>
+        <button (click)="seeTool(+i)"type="button" class="btn btn-outline-primary">Ver mas...</button>
+        <!-- <a [routerLink]="['/tool','i']" class="btn btn-outline-primary">Ver más...</a> -->
+      </div>
+    </div>
+  </div>
+</div>

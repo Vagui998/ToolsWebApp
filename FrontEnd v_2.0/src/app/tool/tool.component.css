@@ -1,0 +1,35 @@
+
+.pagination-controls button {
+  font-size: 1.2rem; /* ajusta el tamaño de fuente como prefieras */
+  padding: 0.5rem 1rem; /* ajusta el padding como prefieras */
+}
+
+.card-img-top {
+  display: block;
+  margin: 0 auto;
+}
+
+.tools-container {
+  margin-bottom: 2rem;
+}
+
+.pagination-container {
+  margin-top: 2rem;
+}
+
+.tools-container .row {
+  height: 500px;
+}
+
+.pagination-navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.current-page {
+  margin: 0 10px;
+  line-height: 1;
+}
+

@@ -1,0 +1,24 @@
+<h1 class="animated fadeIn">{{tool.name}}<small>{{tool.brand.name}}</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+
+  <div class="col-md-4">
+
+    <img [src]="tool.imageURL" [alt]="tool.name" class="img-fluid">
+    <br><br>
+    <a [routerLink]="['/tools']" class="btn btn-outline-danger">Regresar</a>
+  </div>
+
+  <div class="col-md-8">
+
+    <h3>{{tool.name}}</h3>
+    <hr>
+    <p>
+      {{tool.description}}
+    </p>
+
+
+  </div>
+
+</div>

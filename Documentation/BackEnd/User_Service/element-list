@@ -1,0 +1,6 @@
+com.javeriana.user_manager
+com.javeriana.user_manager.Controllers
+com.javeriana.user_manager.Entities
+com.javeriana.user_manager.Interfaces
+com.javeriana.user_manager.Repos
+com.javeriana.user_manager.Services
